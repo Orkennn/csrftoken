@@ -1,7 +1,13 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse
+
 
 app = FastAPI()
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FileResponse("favicon.ico")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
